@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false,
       title: 'Divum Encuestas',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.green
       ),
       home: PruebaHarry(),
     );
