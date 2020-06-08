@@ -79,7 +79,7 @@ class _CardContactos extends State <CardContactos> {
   Widget build(BuildContext context) {
 
     final _imagenContacto = Image.network(
-      "https://via.placeholder.com/150",
+      "https://divumclinic.com/opinion/vista/assets/image/contacto.png",
       width: 50,
     );
 
