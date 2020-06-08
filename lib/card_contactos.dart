@@ -12,7 +12,6 @@ class CardContactos extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _CardContactos(nombreContacto, telefonoContacto, doctores);
   }
 }
@@ -80,13 +79,13 @@ class _CardContactos extends State <CardContactos> {
   Widget build(BuildContext context) {
 
     final _imagenContacto = Image.network(
-      'https://divumclinic.com/opinion/vista/assets/image/contacto.png',
-      width: 45,
+      "https://via.placeholder.com/150",
+      width: 50,
     );
 
-    final _nombreContacto = Text('$nombreContacto');
+    final _nombreContacto = Text('$nombreContacto', style: TextStyle(fontFamily: 'Jost', fontSize: 16),);
 
-    final _numeroContacto = Text('$telefonoContacto');
+    final _numeroContacto = Text('$telefonoContacto', style: TextStyle(fontFamily: 'Jost',),);
 
     final _cardContacto = Container(
         padding: EdgeInsets.only(
