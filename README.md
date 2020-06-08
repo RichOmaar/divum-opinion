@@ -1,16 +1,8 @@
-# moduloeventos
+# Divum-opinion
 
-A new Flutter application.
+Aplicación de flutter para llevar generar encuestas de satisfacción a los pacientes que visiten la clínica DIVUM.
+Esto le permite llevar un mejor control de calidad en las consultas de la clínica.
 
-## Getting Started
+## Cómo empezar
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Lo único que debes hacer es hacer un git clone a éste repositorio, dentro de la carpeta donde se encuentran todos tus proyectos de Flutter y ejecutarlo en un dispositivo físico (obligatoriamente).
