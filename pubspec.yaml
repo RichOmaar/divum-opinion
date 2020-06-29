@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.8.1
-  flutter_contact: ^0.5.3
+  contacts_service: ^0.4.6
   permission_handler: ^5.0.0+hotfix.6
   http: ^0.12.1
   url_launcher: ^5.4.10

@@ -1,7 +1,6 @@
 import 'dart:convert';
-
+import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_contact/contacts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:moduloeventos/card_contactos.dart';
@@ -42,7 +41,23 @@ class _PruebaHarry extends State<PruebaHarry> {
     //PEDIMOS PERMISO PARA ACCEDER A LOS CONTACTOS
     if (await Permission.contacts.request().isGranted) {
       contactos = []; //INICIALIZAMOS LA LISTA QUE VAMOS A UTILIZAR
-      await Contacts.streamContacts().forEach((contact) {
+      Iterable<Contact> _contacts = await ContactsService.getContacts();
+      _contacts.forEach((contact) {
+        if(contact.phones.length > 0){
+          contactos.add({
+            "nombreContacto":contact.displayName,
+            "telefono":contact.phones.first.value
+          });
+        }
+      });
+
+      setState(() {
+        //contactos.sort((a, b) => a["nombreContacto"].toString().compareTo(b["nombreContacto"].toString()));
+        datosCargados = true; //LE DECIMOS AL SISTEMA QUE YA HEMOS CARGADO TODOS LOS DATOS DE LOS CONTACTOS
+      });
+
+
+      /*_contacts.forEach( (contact) {
         //AGREAGAMOS TODOS Y CADA UNO DE LOS CONTACTOS DEL DISPOSITIVO A LA LISTA DE contactos, SÓLO SÍ TIENE UN NÚMERO DE TELÉFONO
         if(contact.phones.length > 0){
           contactos.add({
@@ -57,7 +72,7 @@ class _PruebaHarry extends State<PruebaHarry> {
           //contactos.sort((a, b) => a["nombreContacto"].toString().compareTo(b["nombreContacto"].toString()));
           datosCargados = true; //LE DECIMOS AL SISTEMA QUE YA HEMOS CARGADO TODOS LOS DATOS DE LOS CONTACTOS
         });
-      });
+      });*/
     }
   }
 
